@@ -1,0 +1,58 @@
+#class PromedioClimaSemana:
+    def __init__(self, clima_semanal):
+        self.clima_semanal = clima_semanal
+
+    def calcular_promedio_semanal(self):
+        total_temperaturas = sum(self.clima_semanal)
+        promedio = total_temperaturas / len(self.clima_semanal)
+        return promedio
+
+# Datos de ejemplo: temperatura diaria durante una semana (en grados Celsius)
+temperaturas_semanales = [25, 27, 26, 28, 24, 26, 29]
+
+# Creamos una instancia de la clase PromedioClimaSemana
+promedio_clima = PromedioClimaSemana(temperaturas_semanales)
+
+# Llamamos al método para calcular el promedio semanal
+promedio_semanal = promedio_clima.calcular_promedio_semanal()
+
+# Mostramos el resultado
+print("El promedio semanal del clima es:", promedio_semanal, "grados Celsius")
+
+
+
+#tradicional python
+# Definimos una función para calcular el promedio semanal del clima
+def calcular_promedio_semanal(clima_semanal):
+    total_temperaturas = sum(clima_semanal)
+    promedio = total_temperaturas / len(clima_semanal)
+    return promedio
+
+# Datos de ejemplo: temperatura diaria durante una semana (en grados Celsius)
+temperaturas_semanales = [25, 27, 26, 28, 24, 26, 29]
+
+# Llamamos a la función para calcular el promedio semanal
+promedio_semanal = calcular_promedio_semanal(temperaturas_semanales)
+
+# Mostramos el resultado
+print("El promedio semanal del clima es:", promedio_semanal, "grados Celsius")
+
+
+
+#class PromedioClimaDiario:
+    def __init__(self, clima_diario):
+        self.clima_diario = clima_diario
+
+    def calcular_promedio_diario(self):
+        total_temperaturas = sum(self.clima_diario)
+        promedio = total_temperaturas / len(self.clima_diario)
+        return promedio
+
+# Datos de ejemplo: temperatura durante un día (en grados Celsius)
+temperaturas_diarias = [25, 27, 26, 28, 24, 26, 29]
+
+# Creamos una instancia de la clase PromedioClimaDiario
+promedio_diario = PromedioClimaDiario(temperaturas_diarias)
+
+# Llamamos al método para calcular el promedio diario
+promedio_diario_resultado = promedio_diario.calcular_promedio_diario()
